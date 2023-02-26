@@ -50,11 +50,11 @@ function LoginForm() {
 
   const regExpSettings = {
     firstname: {
-      regexpStr: /^([a-zA-Z]{3,})+$/,
+      regexpStr: /^([a-zA-Zа-яА-Я]{3,})+$/,
       errorStr: "First Name is required and must contain at least 3 letters",
     },
     lastname: {
-      regexpStr: /^([a-zA-Z]{3,})+$/,
+      regexpStr: /^([a-zA-Zа-яА-Я]{3,})+$/,
       errorStr: "Last Name is required and must contain at least 3 letters",
     },
     email: {

@@ -54,12 +54,11 @@ function LoginForm() {
     } else if (pass === "") {
       setErrorText("Password is required!");
       setIsCorrect((prev) => false);
-    } else if (
-      userObject === null ||
-      userObject.email !== email ||
-      userObject.password !== pass
-    ) {
+    } else if (userObject === null) {
       setErrorText("User not found! Please follow the link to register!");
+      setIsCorrect((prev) => false);
+    } else if (userObject.email !== email || userObject.password !== pass) {
+      setErrorText("Invalid login or password!");
       setIsCorrect((prev) => false);
     } else {
       setErrorText("");
